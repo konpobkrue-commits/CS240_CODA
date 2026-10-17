@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="cupcake">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talent Registration | CODA</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+        }
+
+        .input-error {
+            border-color: #ef4444 !important;
+            background-color: #fef2f2 !important;
+        }
+
+        .error-msg {
+            color: #ef4444;
+            font-size: 13px;
+            margin-top: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="bg-base-200 min-h-screen py-10 px-5">
+
+        <div class="max-w-3xl mx-auto">
+
+            <a href="/index.html"
+                class="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all mb-6">
+                <span>←</span>
+                <span>กลับหน้าหลัก</span>
+            </a>
+
+            <section class="bg-base-100 rounded-3xl shadow-md p-7 md:p-10">
+
+                <div class="text-center mb-8">
+                    <span class="badge badge-primary badge-outline">CODA CAREERS</span>
+                    <h1 class="text-3xl md:text-4xl font-bold mt-4">Talent Registration</h1>
+                    <p class="text-base-content/60 mt-2">กรอกข้อมูลเพื่อสมัครงานและประเมินระดับทักษะ AI ของคุณ</p>
+                </div>
+
+
+                <form name="registration" onsubmit="return formValidation()">
+
+                    <!-- คำนำหน้า -->
+                    <div class="form-control mb-5">
+                        <label class="label" for="title">
+                            <span class="label-text font-medium">คำนำหน้า <span class="text-error">*</span></span>
+                        </label>
+
+                        <select id="title" name="title" class="select select-bordered w-full">
+                            <option value="">-- กรุณาเลือกคำนำหน้า --</option>
+                            <option value="นาย">นาย</option>
+                            <option value="นาง">นาง</option>
+                            <option value="นางสาว">นางสาว</option>
+                        </select>
+
+                        <div class="error-msg" id="err_title"></div>
+                    </div>
+
+
+                    <!-- ชื่อ / นามสกุล -->
+                    <div class="grid md:grid-cols-2 gap-5">
+
+                        <div class="form-control">
+                            <label class="label" for="fname">
+                                <span class="label-text font-medium">ชื่อ <span class="text-error">*</span></span>
+                            </label>
+
+                            <input type="text" id="fname" name="fname" placeholder="กรอกชื่อ"
+                                class="input input-bordered w-full">
+
+                            <div class="error-msg" id="err_fname"></div>
+                        </div>
+
+
+                        <div class="form-control">
+                            <label class="label" for="lname">
+                                <span class="label-text font-medium">นามสกุล <span class="text-error">*</span></span>
+                            </label>
+
+                            <input type="text" id="lname" name="lname" placeholder="กรอกนามสกุล"
+                                class="input input-bordered w-full">
+
+                            <div class="error-msg" id="err_lname"></div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- เบอร์โทร -->
+                    <div class="form-control mt-5">
+                        <label class="label" for="phone">
+                            <span class="label-text font-medium">เบอร์โทรศัพท์ <span class="text-error">*</span></span>
+                        </label>
+
+                        <input type="text" id="phone" name="phone" placeholder="เช่น 0812345678"
+                            class="input input-bordered w-full">
+
+                        <div class="error-msg" id="err_phone"></div>
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="form-control mt-5">
+                        <label class="label" for="email">
+                            <span class="label-text font-medium">อีเมล <span class="text-error">*</span></span>
+                        </label>
+
+                        <input type="text" id="email" name="email" placeholder="example@email.com"
+                            class="input input-bordered w-full">
+
+                        <div class="error-msg" id="err_email"></div>
+                    </div>
+
+
+                    <!-- Address -->
+                    <div class="form-control mt-5">
+                        <label class="label" for="address">
+                            <span class="label-text font-medium">ที่อยู่ <span class="text-error">*</span></span>
+                        </label>
+
+                        <textarea id="address" name="address" rows="4" placeholder="กรอกที่อยู่"
+                            class="textarea textarea-bordered w-full"></textarea>
+
+                        <div class="error-msg" id="err_address"></div>
+                    </div>
+
+
+                    <!-- Education -->
+                    <div class="form-control mt-5">
+                        <label class="label" for="education">
+                            <span class="label-text font-medium">ระดับการศึกษา <span class="text-error">*</span></span>
+                        </label>
+
+                        <select id="education" name="education" class="select select-bordered w-full">
+                            <option value="">-- กรุณาเลือกระดับการศึกษา --</option>
+                            <option value="highschool">มัธยมศึกษา / ปวช.</option>
+                            <option value="diploma">อนุปริญญา / ปวส.</option>
+                            <option value="bachelor">ปริญญาตรี</option>
+                            <option value="master">ปริญญาโท</option>
+                            <option value="doctorate">ปริญญาเอก</option>
+                        </select>
+
+                        <div class="error-msg" id="err_education"></div>
+                    </div>
+
+
+                    <!-- AI Skill Tier -->
+                    <div class="form-control mt-6">
+
+                        <label class="label">
+                            <span class="label-text font-medium">
+                                ระดับสมรรถนะ AI (AI Skill Tier)
+                                <span class="text-error">*</span>
+                            </span>
+                        </label>
+
+                        <div class="grid md:grid-cols-3 gap-3">
+
+                            <label class="flex items-center gap-3 border border-base-300 rounded-xl p-4 cursor-pointer hover:bg-base-200">
+                                <input type="radio" name="aiTier" value="Beginner" class="radio radio-primary">
+                                <div>
+                                    <p class="font-medium">Beginner</p>
+                                    <p class="text-xs text-base-content/60">ระดับเริ่มต้น</p>
+                                </div>
+                            </label>
+
+                            <label class="flex items-center gap-3 border border-base-300 rounded-xl p-4 cursor-pointer hover:bg-base-200">
+                                <input type="radio" name="aiTier" value="Pioneer" class="radio radio-secondary">
+                                <div>
+                                    <p class="font-medium">Pioneer</p>
+                                    <p class="text-xs text-base-content/60">ระดับผู้บุกเบิก</p>
+                                </div>
+                            </label>
+
+                            <label class="flex items-center gap-3 border border-base-300 rounded-xl p-4 cursor-pointer hover:bg-base-200">
+                                <input type="radio" name="aiTier" value="Innovator" class="radio radio-accent">
+                                <div>
+                                    <p class="font-medium">Innovator</p>
+                                    <p class="text-xs text-base-content/60">ระดับผู้สร้างสรรค์สิ่งใหม่</p>
+                                </div>
+                            </label>
+
+                        </div>
+
+                        <div class="error-msg" id="err_aiTier"></div>
+                    </div>
+
+
+                    <!-- Position -->
+                    <div class="form-control mt-5">
+                        <label class="label" for="position">
+                            <span class="label-text font-medium">ตำแหน่งงานที่ต้องการสมัคร <span class="text-error">*</span></span>
+                        </label>
+
+                        <select id="position" name="position" class="select select-bordered w-full">
+                            <option value="">-- กรุณาเลือกตำแหน่งงาน --</option>
+                            <option value="Cloud Engineer">Cloud Engineer</option>
+                            <option value="UX/UI Designer">UX/UI Designer</option>
+                            <option value="Software Tester">Software Tester</option>
+                        </select>
+
+                        <div class="error-msg" id="err_position"></div>
+                    </div>
+
+
+                    <!-- PDPA -->
+                    <div class="mt-6">
+
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <input type="checkbox" id="pdpa" name="pdpa" class="checkbox checkbox-primary mt-1">
+
+                            <span class="text-sm leading-6">
+                                ข้าพเจ้ายินยอมให้บริษัท CODA เก็บรวบรวม ใช้
+                                และประมวลผลข้อมูลส่วนบุคคลเพื่อวัตถุประสงค์ในการสมัครงาน
+                                ตามแนวทางคุ้มครองข้อมูลส่วนบุคคล (PDPA)
+                                <span class="text-error">*</span>
+                            </span>
+                        </label>
+
+                        <div class="error-msg" id="err_pdpa"></div>
+
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary w-full mt-8">
+                        สมัครงาน
+                    </button>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <footer class="footer footer-center bg-base-300 text-base-content p-8">
+        <p>© 2026 CODA. All rights reserved.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

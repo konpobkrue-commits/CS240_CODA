@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="cupcake">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | CODA</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar bg-base-100 shadow-md sticky top-0 z-50 justify-center">
+        <nav id="mobileMenu"
+            class="hidden md:flex md:flex-row md:gap-4 absolute md:static top-full left-0 w-full md:w-auto flex-col bg-base-100 md:bg-transparent shadow-md md:shadow-none p-3 md:p-0">
+            <a href="index.html"
+                class="px-5 py-3 md:py-2 rounded-full hover:bg-primary hover:text-primary-content transition-colors duration-200">
+                Home
+            </a>
+            <a href="services.html"
+                class="px-5 py-3 md:py-2 rounded-full hover:bg-primary hover:text-primary-content transition-colors duration-200">
+                Services
+            </a>
+            <a href="about.html"
+                class="px-5 py-3 md:py-2 rounded-full bg-primary hover:text-primary-content transition-colors duration-200">
+                About
+            </a>
+        </nav>
+
+        <label class="swap swap-rotate ml-auto md:hidden cursor-pointer">
+            <input id="menuButton" type="checkbox">
+
+            <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                viewBox="0 0 512 512">
+                <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"></path>
+            </svg>
+
+            <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                viewBox="0 0 512 512">
+                <polygon
+                    points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49">
+                </polygon>
+            </svg>
+        </label>
+    </header>
+
+
+    <main class="bg-base-200 min-h-screen">
+
+        <!-- Hero -->
+        <section class="bg-base-100">
+            <div class="max-w-4xl mx-auto px-5 py-16 md:py-20 text-center">
+                <span class="badge badge-primary badge-outline">ABOUT CODA</span>
+                <h1 class="text-4xl md:text-5xl font-bold mt-5">
+                    Empowering People with
+                    <span class="text-primary">AI & Technology</span>
+                </h1>
+                <p class="text-base-content/60 leading-7 mt-5 max-w-2xl mx-auto">
+                    CODA เป็นแพลตฟอร์มสำหรับค้นหาโอกาสในการทำงาน
+                    และพัฒนาทักษะด้านเทคโนโลยีและปัญญาประดิษฐ์
+                    เพื่อเตรียมความพร้อมสำหรับตลาดแรงงานในยุคดิจิทัล
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Company -->
+        <section class="max-w-6xl mx-auto px-5 py-14">
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- About CODA -->
+                <div class="bg-base-100 rounded-3xl p-8 shadow-sm">
+                    <span class="badge badge-primary">Company</span>
+                    <h2 class="text-3xl font-bold mt-4">CODA</h2>
+                    <p class="text-base-content/60 leading-7 mt-4">
+                        เรามุ่งเน้นการเชื่อมโยงผู้ที่กำลังมองหาโอกาสในการทำงาน
+                        เข้ากับตำแหน่งงานด้านเทคโนโลยี พร้อมสนับสนุนการเรียนรู้
+                        ผ่านหลักสูตรอบรม สัมมนา และ Certification ด้าน AI
+                    </p>
+                    <div class="divider"></div>
+                    <h3 class="text-lg font-bold">เป้าหมายของเรา</h3>
+                    <p class="text-base-content/60 leading-7 mt-2">
+                        ช่วยให้ผู้ใช้งานสามารถค้นหาตำแหน่งงานที่เหมาะสม
+                        พร้อมพัฒนาทักษะและความรู้ที่จำเป็นสำหรับการทำงานในอนาคต
+                    </p>
+                </div>
+
+                <!-- Address -->
+                <div class="bg-base-100 rounded-3xl p-8 shadow-sm">
+                    <span class="badge badge-secondary">Location</span>
+                    <h2 class="text-3xl font-bold mt-4">ที่ตั้งของเรา</h2>
+                    <p class="text-base-content/60 mt-3">
+                        Bangkok University Main Campus
+                    </p>
+                    <div class="bg-base-200 rounded-2xl p-5 mt-6">
+                        <p class="font-semibold">มหาวิทยาลัยกรุงเทพ</p>
+                        <p class="text-base-content/60 leading-7 mt-2">
+                            9/1 หมู่ 5 ถนนพหลโยธิน<br>
+                            ตำบลคลองหนึ่ง อำเภอคลองหลวง<br>
+                            จังหวัดปทุมธานี 12120
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Team -->
+        <section class="max-w-6xl mx-auto px-5 pb-14">
+            <div class="text-center mb-9">
+                <p class="text-primary font-semibold text-sm">OUR TEAM</p>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">ผู้ติดต่อ</h2>
+                <p class="text-base-content/60 mt-3">สามารถติดต่อทีมงาน CODA ได้ตามข้อมูลด้านล่าง</p>
+            </div>
+
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Person 1 -->
+                <div class="card bg-base-100 shadow-sm hover:shadow-lg transition">
+                    <div class="card-body">
+                        <div
+                            class="w-14 h-14 rounded-full bg-primary text-primary-content flex items-center justify-center text-xl font-bold">
+                            01
+                        </div>
+                        <h3 class="text-xl font-bold mt-3">
+                            Napatson Lumsden
+                        </h3>
+                        <p class="text-sm text-base-content/50">
+                            Student ID: 1680700497
+                        </p>
+                        <div class="divider my-2"></div>
+                        <div class="space-y-3">
+                            <div>
+                                <p class="text-xs text-base-content/50">Email</p>
+                                <a href="mailto:student1@email.com" class="text-primary font-medium">
+                                    napatson.lums@bumail.net
+                                </a>
+                            </div>
+                            <div>
+                                <p class="text-xs text-base-content/50">Phone</p>
+                                <a href="tel:0800000001" class="font-medium">
+                                    091-884-9870
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Person 2 -->
+                <div class="card bg-base-100 shadow-sm hover:shadow-lg transition">
+
+                    <div class="card-body">
+
+                        <div
+                            class="w-14 h-14 rounded-full bg-secondary text-secondary-content flex items-center justify-center text-xl font-bold">
+                            02
+                        </div>
+
+                        <h3 class="text-xl font-bold mt-3">
+                            Suparat Nongnuch
+                        </h3>
+
+                        <p class="text-sm text-base-content/50">
+                            Student ID: 1680701107
+                        </p>
+
+                        <div class="divider my-2"></div>
+
+                        <div class="space-y-3">
+
+                            <div>
+                                <p class="text-xs text-base-content/50">Email</p>
+                                <a href="mailto:student2@email.com" class="text-secondary font-medium">
+                                    suparat.nong@bumail.net
+                                </a>
+                            </div>
+
+                            <div>
+                                <p class="text-xs text-base-content/50">Phone</p>
+                                <a href="tel:0800000002" class="font-medium">
+                                    065-581-4665
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Person 3 -->
+                <div class="card bg-base-100 shadow-sm hover:shadow-lg transition">
+
+                    <div class="card-body">
+
+                        <div
+                            class="w-14 h-14 rounded-full bg-accent text-accent-content flex items-center justify-center text-xl font-bold">
+                            03
+                        </div>
+
+                        <h3 class="text-xl font-bold mt-3">
+                            Konpob Kruemyarat
+                        </h3>
+
+                        <p class="text-sm text-base-content/50">
+                            Student ID: 1680704168
+                        </p>
+
+                        <div class="divider my-2"></div>
+
+                        <div class="space-y-3">
+
+                            <div>
+                                <p class="text-xs text-base-content/50">Email</p>
+                                <a href="mailto:student3@email.com" class="text-accent font-medium">
+                                    konpob.krue@bumail.net
+                                </a>
+                            </div>
+
+                            <div>
+                                <p class="text-xs text-base-content/50">Phone</p>
+                                <a href="tel:0800000003" class="font-medium">
+                                    096-229-5255
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Google Map -->
+        <section class="max-w-6xl mx-auto px-5 pb-16">
+
+            <div class="bg-base-100 rounded-3xl p-6 md:p-8 shadow-sm">
+
+                <div class="mb-6">
+                    <p class="text-primary font-semibold text-sm">LOCATION</p>
+
+                    <h2 class="text-3xl font-bold mt-2">
+                        แผนที่
+                    </h2>
+
+                    <p class="text-base-content/60 mt-2">
+                        Bangkok University Main Campus
+                    </p>
+                </div>
+
+
+                <div class="overflow-hidden rounded-2xl">
+
+                    <iframe src="https://www.google.com/maps?q=Bangkok%20University%20Main%20Campus&output=embed"
+                        class="w-full h-[350px] md:h-[450px] border-0" loading="lazy" allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Mission -->
+        <section class="max-w-6xl mx-auto px-5 pb-16">
+
+            <div class="bg-primary text-primary-content rounded-3xl p-8 md:p-10">
+
+                <p class="text-sm font-semibold opacity-70">
+                    OUR MISSION
+                </p>
+
+                <h2 class="text-2xl md:text-3xl font-bold mt-2">
+                    สร้างโอกาสในการเรียนรู้และเติบโตในโลกของ AI
+                </h2>
+
+                <p class="opacity-80 leading-7 mt-3 max-w-3xl">
+                    CODA ต้องการช่วยให้ผู้ใช้งานสามารถค้นหาตำแหน่งงานที่เหมาะสม
+                    และเพิ่มโอกาสในการพัฒนาตนเองผ่านการอบรม
+                    สัมมนา และ Certification ด้านเทคโนโลยีปัญญาประดิษฐ์
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer footer-center bg-base-300 text-base-content p-10">
+        <aside>
+            <h2 class="text-2xl md:text-3xl font-bold">CODA</h2>
+            <p>© 2026 CODA. All rights reserved.</p>
+        </aside>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
